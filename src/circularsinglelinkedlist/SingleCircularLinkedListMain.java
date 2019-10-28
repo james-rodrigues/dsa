@@ -11,7 +11,7 @@ public class SingleCircularLinkedListMain {
 	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
-		SingleCircularLinkedList list = new SingleCircularLinkedList();
+		SingleCircularLinkedList<Integer> list = new SingleCircularLinkedList<Integer>();
 		list.createSingleLinkedList(5);
 		list.insertInLinkedList(10, 1);
 		list.insertInLinkedList(20, 2);

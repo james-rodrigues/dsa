@@ -5,13 +5,13 @@ import node.DoubleNode;
 /**
  * The Class DoubleCircularLinkedList.
  */
-public class DoubleCircularLinkedList {
+public class DoubleCircularLinkedList<T> {
 
 	/** The head. */
-	private DoubleNode head;
+	private DoubleNode<T> head;
 
 	/** The tail. */
-	private DoubleNode tail;
+	private DoubleNode<T> tail;
 
 	/** The size. */
 	private int size;// denotes size of list
@@ -241,7 +241,7 @@ public class DoubleCircularLinkedList {
 	 * @return true, if successful
 	 */
 	// Searching a specified value in linked list
-	boolean searchNode(int nodeValue) {
+	boolean searchNode(T nodeValue) {
 		if (existsLinkedList()) {
 			DoubleNode tempNode = head;
 			traverseLinkedList();

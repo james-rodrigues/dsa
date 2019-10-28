@@ -5,13 +5,13 @@ import node.SingleNode;
 /**
  * The Class SingleLinkedList.
  */
-public class SingleLinkedList {
+public class SingleLinkedList<T> {
 
 	/** The head. */
-	private SingleNode head;
+	private SingleNode<T> head;
 
 	/** The tail. */
-	private SingleNode tail;
+	private SingleNode<T> tail;
 
 	/** The size. */
 	private int size;// denotes size of list
@@ -22,9 +22,9 @@ public class SingleLinkedList {
 	 * @param nodeValue the node value
 	 * @return the single node
 	 */
-	public SingleNode createSingleLinkedList(int nodeValue) {
-		head = new SingleNode();
-		SingleNode node = new SingleNode();
+	public SingleNode<T> createSingleLinkedList(T nodeValue) {
+		head = new SingleNode<T>();
+		SingleNode<T> node = new SingleNode<T>();
 		node.setValue(nodeValue);
 		node.setNext(null);
 		head = node;
@@ -38,7 +38,7 @@ public class SingleLinkedList {
 	 *
 	 * @return the head
 	 */
-	public SingleNode getHead() {
+	public SingleNode<T> getHead() {
 		return head;
 	}
 
@@ -47,7 +47,7 @@ public class SingleLinkedList {
 	 *
 	 * @param head the new head
 	 */
-	public void setHead(SingleNode head) {
+	public void setHead(SingleNode<T> head) {
 		this.head = head;
 	}
 
@@ -56,7 +56,7 @@ public class SingleLinkedList {
 	 *
 	 * @return the tail
 	 */
-	public SingleNode getTail() {
+	public SingleNode<T> getTail() {
 		return tail;
 	}
 
@@ -65,7 +65,7 @@ public class SingleLinkedList {
 	 *
 	 * @param tail the new tail
 	 */
-	public void setTail(SingleNode tail) {
+	public void setTail(SingleNode<T> tail) {
 		this.tail = tail;
 	}
 
@@ -93,8 +93,8 @@ public class SingleLinkedList {
 	 * @param nodeValue the node value
 	 * @param location  the location
 	 */
-	public void insertInLinkedList(int nodeValue, int location) {
-		SingleNode node = new SingleNode();
+	public void insertInLinkedList(T nodeValue, int location) {
+		SingleNode<T> node = new SingleNode<T>();
 		node.setValue(nodeValue);
 		if (!existsLinkedList()) { // Linked List does not exists
 			System.out.println("The linked list does not exist!!");
@@ -107,13 +107,13 @@ public class SingleLinkedList {
 			tail.setNext(node);
 			tail = node;
 		} else {// insert at specified location
-			SingleNode tempNode = head;
+			SingleNode<T> tempNode = head;
 			int index = 0;
 			while (index < location - 1) {// loop till we reach specified node
 				tempNode = tempNode.getNext();
 				index++;
 			} // tempNode currently references to node after which we should insert new node
-			SingleNode nextNode = tempNode.getNext(); // this is the immediate next node after new node
+			SingleNode<T> nextNode = tempNode.getNext(); // this is the immediate next node after new node
 			tempNode.setNext(node);// update reference of tempNode to reference to new node
 			node.setNext(nextNode);// update newly added nodes' next.
 		}
@@ -136,7 +136,7 @@ public class SingleLinkedList {
 	// Traverses Linked List
 	void traverseLinkedList() {
 		if (existsLinkedList()) {
-			SingleNode tempNode = head;
+			SingleNode<T> tempNode = head;
 			for (int i = 0; i < getSize(); i++) {
 				System.out.print(tempNode.getValue());
 				if (i != getSize() - 1) {
@@ -168,11 +168,11 @@ public class SingleLinkedList {
 	 * @return true, if successful
 	 */
 	// Searches a node with given value
-	boolean searchNode(int nodeValue) {
+	boolean searchNode(T nodeValue) {
 		if (existsLinkedList()) {
-			SingleNode tempNode = head;
+			SingleNode<T> tempNode = head;
 			for (int i = 0; i < getSize(); i++) {
-				if (tempNode.getValue() == nodeValue) {
+				if (tempNode.getValue().equals(nodeValue)) {
 					System.out.print("Found the node at location: " + i + "\n");
 					return true;
 				}
@@ -200,7 +200,7 @@ public class SingleLinkedList {
 				tail = null;
 			}
 		} else if (location >= getSize()) { // If location is not in range or equal, then delete last node
-			SingleNode tempNode = head;
+			SingleNode<T> tempNode = head;
 			for (int i = 0; i < size - 1; i++) {
 				tempNode = tempNode.getNext(); // temp node points to 2nd last node
 			}
@@ -214,7 +214,7 @@ public class SingleLinkedList {
 			setSize(getSize() - 1);
 
 		} else { // if any inside node is to be deleted
-			SingleNode tempNode = head;
+			SingleNode<T> tempNode = head;
 			for (int i = 0; i < location - 1; i++) {
 				tempNode = tempNode.getNext(); // we need to traverse till we find the location
 			}

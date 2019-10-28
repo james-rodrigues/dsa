@@ -11,7 +11,7 @@ public class DoubleCircularLinkedListMain {
 	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
-		DoubleCircularLinkedList list = new DoubleCircularLinkedList();
+		DoubleCircularLinkedList<Integer> list = new DoubleCircularLinkedList<Integer>();
 		list.createDoubleLinkedList(5);
 		list.insertInLinkedList(10, 1);
 		list.insertInLinkedList(20, 2);

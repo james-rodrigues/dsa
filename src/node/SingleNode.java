@@ -3,10 +3,10 @@ package node;
 /**
  * The Class SingleNode.
  */
-public  class SingleNode {
+public  class SingleNode<T> {
 	
 	/** The value. */
-	private int value;
+	private T value;
 	
 	/** The next. */
 	private SingleNode next;
@@ -16,7 +16,7 @@ public  class SingleNode {
  *
  * @return the value
  */
-public int getValue() {
+public T getValue() {
 		return value;
 	}
 
@@ -25,7 +25,7 @@ public int getValue() {
 	 *
 	 * @param value the new value
 	 */
-	public void setValue(int value) {
+	public void setValue(T value) {
 		this.value = value;
 	}
 

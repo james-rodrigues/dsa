@@ -5,17 +5,17 @@ import singlelinkedlist.SingleLinkedList;
 /**
  * The Class QueueByLinkedList.
  */
-public class QueueByLinkedList {
+public class QueueByLinkedList<T> {
 
 	/** The list. */
-	SingleLinkedList list;
+	SingleLinkedList<T> list;
 
 	/**
 	 * Instantiates a new queue by linked list.
 	 */
 	// constructor
 	public QueueByLinkedList() {
-		list = new SingleLinkedList();
+		list = new SingleLinkedList<T>();
 	}// end of method
 
 	/**
@@ -23,7 +23,7 @@ public class QueueByLinkedList {
 	 *
 	 * @param value the value
 	 */
-	public void enQueue(int value) {
+	public void enQueue(T value) {
 		if (list.getHead() == null) {
 			list.createSingleLinkedList(value);
 		} else {
@@ -37,12 +37,12 @@ public class QueueByLinkedList {
 	 *
 	 * @return the int
 	 */
-	public int deQueue() {
-		int value = -1;
+	public T deQueue() {
+		T value = null;
 		if (isQueueEmpty()) {
 			System.out.println("Queue underflow error!!");
 		} else {
-			value = list.getHead().getValue();
+			value = (T) list.getHead().getValue();
 			list.deletionOfNode(0);
 		}
 		return value;
@@ -53,12 +53,12 @@ public class QueueByLinkedList {
 	 *
 	 * @return the int
 	 */
-	public int peek() {
+	public T peek() {
 		if (!isQueueEmpty())
-			return list.getHead().getValue();
+			return (T) list.getHead().getValue();
 		else {
 			System.out.println("The queue is empty!!");
-			return -1;
+			return null;
 		}
 	}// end of method
 

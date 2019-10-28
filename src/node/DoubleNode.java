@@ -3,23 +3,23 @@ package node;
 /**
  * The Class DoubleNode.
  */
-public class DoubleNode {
+public class DoubleNode<T> {
 
 	/** The value. */
-	private int value;
+	private T value;
 
 	/** The next. */
-	private DoubleNode next;
+	private DoubleNode<T> next;
 
 	/** The prev. */
-	private DoubleNode prev;
+	private DoubleNode<T> prev;
 
 	/**
 	 * Gets the value.
 	 *
 	 * @return the value
 	 */
-	public int getValue() {
+	public T getValue() {
 		return value;
 	}
 
@@ -28,7 +28,7 @@ public class DoubleNode {
 	 *
 	 * @param value the new value
 	 */
-	public void setValue(int value) {
+	public void setValue(T value) {
 		this.value = value;
 	}
 
@@ -37,7 +37,7 @@ public class DoubleNode {
 	 *
 	 * @return the next
 	 */
-	public DoubleNode getNext() {
+	public DoubleNode<T> getNext() {
 		return next;
 	}
 
@@ -46,7 +46,7 @@ public class DoubleNode {
 	 *
 	 * @param next the new next
 	 */
-	public void setNext(DoubleNode next) {
+	public void setNext(DoubleNode<T> next) {
 		this.next = next;
 	}
 
@@ -55,7 +55,7 @@ public class DoubleNode {
 	 *
 	 * @return the prev
 	 */
-	public DoubleNode getPrev() {
+	public DoubleNode<T> getPrev() {
 		return prev;
 	}
 
@@ -64,7 +64,7 @@ public class DoubleNode {
 	 *
 	 * @param prev the new prev
 	 */
-	public void setPrev(DoubleNode prev) {
+	public void setPrev(DoubleNode<T> prev) {
 		this.prev = prev;
 	}
 

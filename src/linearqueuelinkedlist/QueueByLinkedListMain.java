@@ -13,7 +13,7 @@ public class QueueByLinkedListMain {
 	public static void main(String[] args) {
 
 		System.out.println("Creating a queue");
-		QueueByLinkedList queue = new QueueByLinkedList();
+		QueueByLinkedList<Integer> queue = new QueueByLinkedList<Integer>();
 
 		System.out.println("Enqueueing 6 values into queue");
 		for (int i = 1; i <= 6; i++) {

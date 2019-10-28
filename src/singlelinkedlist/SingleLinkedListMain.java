@@ -12,7 +12,7 @@ public class SingleLinkedListMain {
 	 */
 	public static void main(String[] args) {
 
-		SingleLinkedList list = new SingleLinkedList();
+		SingleLinkedList<Integer> list = new SingleLinkedList<Integer>();
 		list.createSingleLinkedList(5);
 		list.traverseLinkedList();
 

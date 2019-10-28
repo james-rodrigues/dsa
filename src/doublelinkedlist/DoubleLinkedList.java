@@ -5,13 +5,13 @@ import node.DoubleNode;
 /**
  * The Class DoubleLinkedList.
  */
-public class DoubleLinkedList {
+public class DoubleLinkedList<T> {
 
 	/** The head. */
-	DoubleNode head;
+	DoubleNode<T> head;
 
 	/** The tail. */
-	DoubleNode tail;
+	DoubleNode<T> tail;
 
 	/** The size. */
 	int size;// denotes size of list
@@ -40,9 +40,9 @@ public class DoubleLinkedList {
 	 * @param nodeValue the node value
 	 * @return the double node
 	 */
-	DoubleNode createDoubleLinkedList(int nodeValue) {
-		head = new DoubleNode();
-		DoubleNode node = new DoubleNode();
+	DoubleNode<T> createDoubleLinkedList(T nodeValue) {
+		head = new DoubleNode<T>();
+		DoubleNode<T> node = new DoubleNode<T>();
 		node.setValue(nodeValue);
 		node.setNext(null);
 		node.setPrev(null);
@@ -58,8 +58,8 @@ public class DoubleLinkedList {
 	 * @param nodeValue the node value
 	 * @param location  the location
 	 */
-	void insertInLinkedList(int nodeValue, int location) {
-		DoubleNode node = new DoubleNode();
+	void insertInLinkedList(T nodeValue, int location) {
+		DoubleNode<T> node = new DoubleNode<T>();
 		node.setValue(nodeValue);
 		if (!existsLinkedList()) {
 			System.out.println("The linked list does not exist!!");
@@ -75,7 +75,7 @@ public class DoubleLinkedList {
 			node.setPrev(tail);
 			tail = node; // to keep track of last node
 		} else {// insert at specified location
-			DoubleNode tempNode = head;
+			DoubleNode<T> tempNode = head;
 			int index = 0;
 			while (index < location - 1) {// loop till we reach specified node
 				tempNode = tempNode.getNext();
@@ -106,7 +106,7 @@ public class DoubleLinkedList {
 	void traverseLinkedList() {
 		if (existsLinkedList()) {
 			// System.out.println("Linked List now: ");
-			DoubleNode tempNode = head;
+			DoubleNode<T> tempNode = head;
 			for (int i = 0; i < size; i++) {
 
 				System.out.print(tempNode.getValue());
@@ -127,7 +127,7 @@ public class DoubleLinkedList {
 	// Traverse the linked list from head to last
 	void traverseLinkedListInReverseOrder() {
 		if (existsLinkedList()) {
-			DoubleNode tempNode = tail;
+			DoubleNode<T> tempNode = tail;
 			for (int i = 0; i < size; i++) {
 				System.out.print(tempNode.getValue());
 				if (i != size - 1) {
@@ -147,7 +147,7 @@ public class DoubleLinkedList {
 	// delete whole linked list
 	void deleteLinkedList() {
 		System.out.println("\n\nDeleting Linked List...");
-		DoubleNode tempNode = head;
+		DoubleNode<T> tempNode = head;
 		for (int i = 0; i < size; i++) {
 			tempNode.setPrev(null);
 			tempNode = tempNode.getNext();
@@ -165,9 +165,9 @@ public class DoubleLinkedList {
 	 * @return true, if successful
 	 */
 	// Search for a node in linked list
-	boolean searchNode(int nodeValue) {
+	boolean searchNode(T nodeValue) {
 		if (existsLinkedList()) {
-			DoubleNode tempNode = head;
+			DoubleNode<T> tempNode = head;
 			for (int i = 0; i < size; i++) {
 				if (tempNode.getValue() == nodeValue) {
 					System.out.print("Found the node at locaiton: " + i);
@@ -201,7 +201,7 @@ public class DoubleLinkedList {
 				setSize(getSize() - 1);
 			}
 		} else if (location >= getSize()) { // If location is not in range or equal, then delete last node
-			DoubleNode tempNode = tail.getPrev(); // temp node points to 2nd last node
+			DoubleNode<T> tempNode = tail.getPrev(); // temp node points to 2nd last node
 			if (tempNode == head) { // if this is the only element in the list
 				tail = head = null;
 				setSize(getSize() - 1);
@@ -212,9 +212,10 @@ public class DoubleLinkedList {
 			setSize(getSize() - 1);
 
 		} else { // if any inside node is to be deleted
-			DoubleNode tempNode = head;
+			DoubleNode<T> tempNode = head;
 			for (int i = 0; i < location - 1; i++) {
 				tempNode = tempNode.getNext(); // we need to traverse till we find the location
+				System.out.println(tempNode);
 			}
 			tempNode.setNext(tempNode.getNext().getNext()); // delete the required node
 			tempNode.getNext().setPrev(tempNode);

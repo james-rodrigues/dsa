@@ -5,10 +5,10 @@ import singlelinkedlist.SingleLinkedList;
 /**
  * The Class StackByLinkedList.
  */
-public class StackByLinkedList {
+public class StackByLinkedList<T> {
 
 	/** The list. */
-	SingleLinkedList list;
+	SingleLinkedList<T> list;
 
 	
 	/**
@@ -16,7 +16,7 @@ public class StackByLinkedList {
 	 */
 	//constructor
 	public  StackByLinkedList() {
-		list = new SingleLinkedList();
+		list = new SingleLinkedList<T>();
 	}//end of method
 
 	
@@ -25,7 +25,7 @@ public class StackByLinkedList {
 	 *
 	 * @param value the value
 	 */
-	public void push(int value) {
+	public void push(T value) {
 		if(list.getHead()== null) {
 			list.createSingleLinkedList(value);
 		}else {
@@ -40,12 +40,12 @@ public class StackByLinkedList {
 	 *
 	 * @return the int
 	 */
-	public int pop() {
-		int value = -1;
+	public T pop() {
+		T value = null;
 		if (isEmpty()) {
 			System.out.println("Stack underflow error!!");
 		} else {
-			value = list.getHead().getValue();
+			value = (T) list.getHead().getValue();
 			list.deletionOfNode(0);
 		}
 		return value;
@@ -70,12 +70,12 @@ public class StackByLinkedList {
 	 *
 	 * @return the int
 	 */
-	public int peek() {
+	public T peek() {
 		if (!isEmpty())
-			return list.getHead().getValue();
+			return (T) list.getHead().getValue();
 		else {
 			System.out.println("The stack is empty!!");
-			return -1;
+			return null;
 		}
 	}// end of method
 	

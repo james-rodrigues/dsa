@@ -12,7 +12,7 @@ public class StackByLinkedListMain {
 	 */
 	public static void main(String[] args) {
 
-		StackByLinkedList stack = new StackByLinkedList();
+		StackByLinkedList<Integer> stack = new StackByLinkedList<Integer>();
 
 		System.out.println("Pushing 10 values into stack");
 		for (int i = 1; i <= 10; i++) {

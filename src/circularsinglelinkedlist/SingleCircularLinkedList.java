@@ -5,13 +5,13 @@ import node.SingleNode;
 /**
  * The Class SingleCircularLinkedList.
  */
-public class SingleCircularLinkedList {
+public class SingleCircularLinkedList<T> {
 
 	/** The head. */
-	private SingleNode head;
+	private SingleNode<T> head;
 
 	/** The tail. */
-	private SingleNode tail;
+	private SingleNode<T> tail;
 
 	/** The size. */
 	private int size;// denotes size of list
@@ -22,9 +22,9 @@ public class SingleCircularLinkedList {
 	 * @param nodeValue the node value
 	 * @return the single node
 	 */
-	SingleNode createSingleLinkedList(int nodeValue) {
-		head = new SingleNode();
-		SingleNode node = new SingleNode();
+	SingleNode<T> createSingleLinkedList(T nodeValue) {
+		head = new SingleNode<T>();
+		SingleNode<T> node = new SingleNode<T>();
 		node.setValue(nodeValue);
 		node.setNext(node);
 		head = node;
@@ -38,7 +38,7 @@ public class SingleCircularLinkedList {
 	 *
 	 * @return the head
 	 */
-	public SingleNode getHead() {
+	public SingleNode<T> getHead() {
 		return head;
 	}
 
@@ -47,7 +47,7 @@ public class SingleCircularLinkedList {
 	 *
 	 * @param head the new head
 	 */
-	public void setHead(SingleNode head) {
+	public void setHead(SingleNode<T> head) {
 		this.head = head;
 	}
 
@@ -56,7 +56,7 @@ public class SingleCircularLinkedList {
 	 *
 	 * @return the tail
 	 */
-	public SingleNode getTail() {
+	public SingleNode<T> getTail() {
 		return tail;
 	}
 
@@ -65,7 +65,7 @@ public class SingleCircularLinkedList {
 	 *
 	 * @param tail the new tail
 	 */
-	public void setTail(SingleNode tail) {
+	public void setTail(SingleNode<T> tail) {
 		this.tail = tail;
 	}
 
@@ -93,8 +93,8 @@ public class SingleCircularLinkedList {
 	 * @param nodeValue the node value
 	 * @param location  the location
 	 */
-	void insertInLinkedList(int nodeValue, int location) {
-		SingleNode node = new SingleNode();
+	void insertInLinkedList(T nodeValue, int location) {
+		SingleNode<T> node = new SingleNode<T>();
 		node.setValue(nodeValue);
 		System.out.println("Inserting new node at location: " + location);
 		if (!existsLinkedList()) {
@@ -110,7 +110,7 @@ public class SingleCircularLinkedList {
 			tail.setNext(head); // update tail to circularly point head
 		} else // insert at specified location
 		{
-			SingleNode tempNode = head;
+			SingleNode<T> tempNode = head;
 			int index = 0;
 			while (index < location - 1) {// loop till we reach specified node
 				tempNode = tempNode.getNext();
@@ -197,9 +197,9 @@ public class SingleCircularLinkedList {
 	 * @return true, if successful
 	 */
 	// Search given value in Linked List
-	boolean searchNode(int nodeValue) {
+	boolean searchNode(T nodeValue) {
 		if (existsLinkedList()) {
-			SingleNode tempNode = head;
+			SingleNode<T> tempNode = head;
 			for (int i = 0; i < size; i++) {
 
 				// System.out.print(tempNode.value);
@@ -232,7 +232,7 @@ public class SingleCircularLinkedList {
 				tail = null;
 			}
 		} else if (location >= getSize()) { // If location is not in range or equal, then delete last node
-			SingleNode tempNode = head;
+			SingleNode<T> tempNode = head;
 			for (int i = 0; i < size - 1; i++) {
 				tempNode = tempNode.getNext(); // temp node points to 2nd last node
 			}
@@ -246,7 +246,7 @@ public class SingleCircularLinkedList {
 			setSize(getSize() - 1);
 
 		} else { // if any inside node is to be deleted
-			SingleNode tempNode = head;
+			SingleNode<T> tempNode = head;
 			for (int i = 0; i < location - 1; i++) {
 				tempNode = tempNode.getNext(); // we need to traverse till we find the location
 			}

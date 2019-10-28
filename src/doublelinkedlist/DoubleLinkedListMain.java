@@ -11,7 +11,7 @@ public class DoubleLinkedListMain {
 	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
-		DoubleLinkedList list = new DoubleLinkedList();
+		DoubleLinkedList<Integer> list = new DoubleLinkedList<Integer>();
 		list.createDoubleLinkedList(5);
 		list.traverseLinkedList();
 
@@ -45,10 +45,10 @@ public class DoubleLinkedListMain {
 		System.out.println("List after deletion: ");
 		list.traverseLinkedList();
 
-		System.out.println("\n\nDeleting the node having location = 3: ");
+		System.out.println("\n\nDeleting the node having location = 4: ");
 		System.out.println("List before deletion: ");
 		list.traverseLinkedList();
-		list.deletionOfNode(3);
+		list.deletionOfNode(4);
 		System.out.println("List after deletion: ");
 		list.traverseLinkedList();
 
