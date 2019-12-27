@@ -1,7 +1,15 @@
 package sorting;
 
+/**
+ * The Class BubbleSort.
+ */
 public class BubbleSort {
 
+	/**
+	 * Bubble sort.
+	 *
+	 * @param arr the arr
+	 */
 	void bubbleSort(int arr[]) {
 		int n = arr.length;
 		for (int i = 0; i < n - 1; i++) //run from first cell to last cell
@@ -14,6 +22,11 @@ public class BubbleSort {
 	}//end of method
 
 	
+	/**
+	 * Prints the array.
+	 *
+	 * @param arr the arr
+	 */
 	/* Prints the array */
 	void printArray(int arr[]) {
 		int n = arr.length;

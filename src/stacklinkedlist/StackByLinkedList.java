@@ -4,6 +4,8 @@ import singlelinkedlist.SingleLinkedList;
 
 /**
  * The Class StackByLinkedList.
+ *
+ * @param <T> the generic type
  */
 public class StackByLinkedList<T> {
 

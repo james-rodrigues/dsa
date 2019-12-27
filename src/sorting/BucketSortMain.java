@@ -1,7 +1,16 @@
 package sorting;
 import java.util.Random;
 
+/**
+ * The Class BucketSortMain.
+ */
 public class BucketSortMain {
+	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		
 		int arr[] = new int[100];

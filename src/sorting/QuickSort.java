@@ -1,6 +1,17 @@
 package sorting;
 
+/**
+ * The Class QuickSort.
+ */
 public class QuickSort {
+	
+	/**
+	 * Quick sort.
+	 *
+	 * @param array the array
+	 * @param start the start
+	 * @param end the end
+	 */
 	public static void quickSort(int[] array, int start, int end) {
 		if (start < end) {
 			int pivot = partition(array, start, end);
@@ -10,6 +21,14 @@ public class QuickSort {
 	}//end of method
 
 	
+	/**
+	 * Partition.
+	 *
+	 * @param array the array
+	 * @param p the p
+	 * @param q the q
+	 * @return the int
+	 */
 	static int partition(int[] array, int p, int q) {
 		int pivot = q;
 		int i = p-1;
@@ -26,6 +45,11 @@ public class QuickSort {
 	}//end of method
 	
 	
+	/**
+	 * Prints the array.
+	 *
+	 * @param array the array
+	 */
 	public static void printArray(int []array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i]+"  ");

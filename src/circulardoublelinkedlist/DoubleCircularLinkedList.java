@@ -4,6 +4,8 @@ import node.DoubleNode;
 
 /**
  * The Class DoubleCircularLinkedList.
+ *
+ * @param <T> the generic type
  */
 public class DoubleCircularLinkedList<T> {
 

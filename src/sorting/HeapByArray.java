@@ -1,10 +1,22 @@
 package sorting;
 
+/**
+ * The Class HeapByArray.
+ */
 public class HeapByArray {
+	
+	/** The arr. */
 	int[] arr;
+	
+	/** The size of tree. */
 	int sizeOfTree;
 	
 	
+	/**
+	 * Instantiates a new heap by array.
+	 *
+	 * @param size the size
+	 */
 	//Constructor
 	public HeapByArray(int size) {
 		//We are adding 1 here so that first cell of the array can be left blank all the time. This is eliminate problem of array starting from index 0.
@@ -14,11 +26,21 @@ public class HeapByArray {
 	}//end of method
 
 	
+	/**
+	 * Size of array.
+	 *
+	 * @return the int
+	 */
 	public int sizeOfArray() {
 		return arr.length;
 	}
 	
 	
+	/**
+	 * Size of tree.
+	 *
+	 * @return the int
+	 */
 	public int sizeOfTree() {
 		System.out.println("Size Of Tree: " + sizeOfTree);
 		return sizeOfTree;
@@ -26,6 +48,11 @@ public class HeapByArray {
 	
 	
 	
+	/**
+	 * Checks if is heap empty.
+	 *
+	 * @return true, if is heap empty
+	 */
 	public boolean isHeapEmpty() {
 		if (sizeOfTree <= 0) {
 			System.out.println("Tree is empty !");
@@ -38,6 +65,9 @@ public class HeapByArray {
 	
 	
 	
+	/**
+	 * Deleteheap.
+	 */
 	public void deleteheap() {
 		arr = null;
 		System.out.println("Heap has been deleted !");
@@ -45,6 +75,11 @@ public class HeapByArray {
 	
 	
 	
+	/**
+	 * Insert in heap.
+	 *
+	 * @param value the value
+	 */
 	//Insert a new value in Heap
 	public void insertInHeap(int value) {
 		//Doing +1 because sizeOfTree always points to the last occupied cell of the array 
@@ -58,6 +93,9 @@ public class HeapByArray {
 	
 	
 	
+	/**
+	 * Peek.
+	 */
 	// Peek into Heap
 	public void peek() {
 		if(sizeOfTree == 0) {
@@ -69,6 +107,11 @@ public class HeapByArray {
 	
 	
 	
+	/**
+	 * Extract head of heap.
+	 *
+	 * @return the int
+	 */
 	//Extract Head of Heap
 	public int extractHeadOfHeap() {
 		if(sizeOfTree == 0) {
@@ -90,6 +133,11 @@ public class HeapByArray {
 
 	
 	
+	/**
+	 * Heapify bottom to top.
+	 *
+	 * @param index the index
+	 */
 	public void HeapifyBottomToTop(int index) {
 		int parent = index / 2;
 		// We are at root of the tree. Hence no more Heapifying is required.
@@ -108,6 +156,11 @@ public class HeapByArray {
 	
 	
 	
+	/**
+	 * Heapify top to bottom.
+	 *
+	 * @param index the index
+	 */
 	public void HeapifyTopToBottom(int index) {
 		int left  = index*2;
 		int right = (index*2)+1;
@@ -139,6 +192,9 @@ public class HeapByArray {
 	
 	
 	
+	/**
+	 * Level order.
+	 */
 	public void levelOrder() {
 		System.out.println("Printing all the elements of this Heap...");// Printing from 1 because 0th cell is dummy
 		for (int i = 1; i <= sizeOfTree; i++) {

@@ -7,16 +7,37 @@ import java.util.ArrayList;
  */
 public class NumberOfPathsNode {
 
+	/** The cost to reach last cell. */
 	int costToReachLastCell = 0;
+	
+	/** The cost of current cell. */
 	int costOfCurrentCell = 0;
+	
+	/** The right cell. */
 	NumberOfPathsNode rightCell = null;
+	
+	/** The down cell. */
 	NumberOfPathsNode downCell = null;
+	
+	/** The number of ways to come here from right or down. */
 	int numberOfWaysToComeHereFromRightOrDown = 0;
+	
+	/** The Number of ways satifying down cell. */
 	ArrayList<Integer> NumberOfWaysSatifyingDownCell = new ArrayList<Integer>();
+	
+	/** The Number of ways satifying right cell. */
 	ArrayList<Integer> NumberOfWaysSatifyingRightCell = new ArrayList<Integer>();
 	
 	
 	
+	/**
+	 * Instantiates a new number of paths node.
+	 *
+	 * @param costOfCurrentCell the cost of current cell
+	 * @param rightCell the right cell
+	 * @param DownCell the down cell
+	 * @param costToReachLastCell the cost to reach last cell
+	 */
 	//Constructor
 	public NumberOfPathsNode(int costOfCurrentCell, NumberOfPathsNode rightCell, NumberOfPathsNode DownCell, int costToReachLastCell) {
 		this.costOfCurrentCell = costOfCurrentCell;
@@ -28,6 +49,11 @@ public class NumberOfPathsNode {
 	
 	
 	
+	/**
+	 * Gets the number of ways to reach last cell from here.
+	 *
+	 * @return the number of ways to reach last cell from here
+	 */
 	//Getting numbers of ways to reach last cell from current cell
 	public int getnumberOfWaysToReachLastCellFromHere() {
 		int numberOfWaysToReachLastCellFromHere = 0;
@@ -45,6 +71,9 @@ public class NumberOfPathsNode {
 	}
 	
 	
+	/**
+	 * Sets the number of ways to come here from right or down.
+	 */
 	//Calculate number ways
 	public void setNumberOfWaysToComeHereFromRightOrDown() {
 		
@@ -62,6 +91,9 @@ public class NumberOfPathsNode {
 	}
 	
 	
+	/**
+	 * Calculate number of ways satifying right cell.
+	 */
 	//Calculate number of ways to come here from Right cell
 	public void calculateNumberOfWaysSatifyingRightCell(){
 		if(rightCell == null) { 
@@ -85,6 +117,9 @@ public class NumberOfPathsNode {
 	}//end of method
 	
 	
+	/**
+	 * Calculate number of ways satifying down cell.
+	 */
 	//Calculate number of ways to come here from Down cell
 		public void calculateNumberOfWaysSatifyingDownCell(){
 			if((downCell == null) && (rightCell == null)) { //Base case for last row and col

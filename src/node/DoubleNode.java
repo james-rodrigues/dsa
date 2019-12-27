@@ -2,6 +2,8 @@ package node;
 
 /**
  * The Class DoubleNode.
+ *
+ * @param <T> the generic type
  */
 public class DoubleNode<T> {
 

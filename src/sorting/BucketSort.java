@@ -2,16 +2,29 @@ package sorting;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * The Class BucketSort.
+ */
 public class BucketSort {
+	
+	/** The arr. */
 	int arr[];
 	
 	
+	/**
+	 * Instantiates a new bucket sort.
+	 *
+	 * @param arr the arr
+	 */
 	//Constructor
 	public BucketSort(int arr[]) {
 		this.arr = arr;
 	}
 	
 	
+	/**
+	 * Prints the array.
+	 */
 	//Prints Array
 	public void printArray() {
 		int tmp = 0;
@@ -26,6 +39,11 @@ public class BucketSort {
 	}
 	
 	
+	/**
+	 * Prints the bucket.
+	 *
+	 * @param buckets the buckets
+	 */
 	//Prints Buckets
 	public void printBucket(ArrayList<Integer>[] buckets) {
 		for(int i=0; i<buckets.length; i++) {
@@ -37,6 +55,9 @@ public class BucketSort {
 		
 	}
 	
+	/**
+	 * Bucket sort.
+	 */
 	//Sorting method
 	public void bucketSort() {
 		

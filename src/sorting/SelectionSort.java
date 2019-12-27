@@ -1,7 +1,15 @@
 package sorting;
 
+/**
+ * The Class SelectionSort.
+ */
 public class SelectionSort {
 	
+	/**
+	 * Selection sort.
+	 *
+	 * @param a the a
+	 */
 	static void selectionSort(int[] a) {
 		for (int j = 0; j<a.length; j++) {
 			int minimumIndex = j;
@@ -18,6 +26,11 @@ public class SelectionSort {
 	}//end of method
 
 	
+	/**
+	 * Prints the array.
+	 *
+	 * @param array the array
+	 */
 	public static void printArray(int []array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i]+"  ");

@@ -4,6 +4,8 @@ import node.DoubleNode;
 
 /**
  * The Class DoubleLinkedList.
+ *
+ * @param <T> the generic type
  */
 public class DoubleLinkedList<T> {
 

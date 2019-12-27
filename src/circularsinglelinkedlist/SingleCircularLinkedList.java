@@ -4,6 +4,8 @@ import node.SingleNode;
 
 /**
  * The Class SingleCircularLinkedList.
+ *
+ * @param <T> the generic type
  */
 public class SingleCircularLinkedList<T> {
 

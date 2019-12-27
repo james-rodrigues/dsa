@@ -4,6 +4,8 @@ import singlelinkedlist.SingleLinkedList;
 
 /**
  * The Class QueueByLinkedList.
+ *
+ * @param <T> the generic type
  */
 public class QueueByLinkedList<T> {
 

@@ -1,7 +1,15 @@
 package sorting;
 
+/**
+ * The Class InsertionSort.
+ */
 public class InsertionSort {
 	
+	/**
+	 * Insertion sort.
+	 *
+	 * @param A the a
+	 */
 	static void insertionSort(int [] A) {
 		 for(int  i = 1 ; i<A.length;i++) {  
 			 int  tmp=A[i], j=i;
@@ -14,6 +22,11 @@ public class InsertionSort {
 	}//end of method
 	
 	
+	/**
+	 * Prints the array.
+	 *
+	 * @param array the array
+	 */
 	public static void printArray(int []array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i]+"  ");

@@ -4,6 +4,8 @@ import node.SingleNode;
 
 /**
  * The Class SingleLinkedList.
+ *
+ * @param <T> the generic type
  */
 public class SingleLinkedList<T> {
 

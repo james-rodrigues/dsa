@@ -1,7 +1,17 @@
 package sorting;
 
+/**
+ * The Class MergeSort.
+ */
 public class MergeSort {
 
+	/**
+	 * Merge sort.
+	 *
+	 * @param Array the array
+	 * @param left the left
+	 * @param right the right
+	 */
 	public static void mergeSort(int[] Array, int left, int right) {
 		if (right > left) {
 			int m = (left + right) / 2;
@@ -12,6 +22,14 @@ public class MergeSort {
 	}//end of method
 
 	
+	/**
+	 * Merge.
+	 *
+	 * @param A the a
+	 * @param left the left
+	 * @param middle the middle
+	 * @param right the right
+	 */
 	static void merge(int[] A, int left, int middle, int right) {
 		int [] leftTmpArray = new int[middle-left+2];  //Create tmp arrays
 		int [] rightTmpArray = new int[right-middle+1];
@@ -36,6 +54,11 @@ public class MergeSort {
 	}//end of method
 	
 	
+	/**
+	 * Prints the array.
+	 *
+	 * @param array the array
+	 */
 	public static void printArray(int []array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i]+"  ");
