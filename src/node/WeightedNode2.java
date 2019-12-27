@@ -3,7 +3,7 @@ package node;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-//import mst.DisjointSet;
+import graph.mst.DisjointSet;
 
 /**
  * The Class WeightedNode2.
@@ -27,7 +27,9 @@ public class WeightedNode2 implements Comparable<WeightedNode2> {
 	
 	/** The distance. */
 	private int distance;
-	// private DisjointSet set;
+	
+	/** The set. */
+	private DisjointSet set;
 
 	/**
 	 * Instantiates a new weighted node 2.
@@ -39,11 +41,23 @@ public class WeightedNode2 implements Comparable<WeightedNode2> {
 		distance = Integer.MAX_VALUE;
 	}
 
-	/*
-	 * public DisjointSet getSet() { return set; }
-	 * 
-	 * public void setSet(DisjointSet set) { this.set = set; }
+	/**
+	 * Gets the sets the.
+	 *
+	 * @return the sets the
 	 */
+	public DisjointSet getSet() {
+		return set;
+	}
+
+	/**
+	 * Sets the sets the.
+	 *
+	 * @param set the new sets the
+	 */
+	public void setSet(DisjointSet set) {
+		this.set = set;
+	}
 
 	/**
 	 * Gets the name.
