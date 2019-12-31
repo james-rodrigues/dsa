@@ -1,6 +1,6 @@
 package linearqueuelinkedlist;
 
-import singlelinkedlist.SingleLinkedList;
+import linkedlist.singlelinkedlist.SingleLinkedList;
 
 /**
  * The Class QueueByLinkedList.
