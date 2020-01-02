@@ -4,19 +4,19 @@ package node;
  * The Class BinaryNodeWithParent.
  */
 public class BinaryNodeWithParent {
-	
+
 	/** The value. */
 	private int value;
-	
+
 	/** The parent. */
 	private BinaryNodeWithParent parent;
-	
+
 	/** The left. */
 	private BinaryNodeWithParent left;
-	
+
 	/** The right. */
 	private BinaryNodeWithParent right;
-	
+
 	/**
 	 * Gets the value.
 	 *
@@ -96,7 +96,7 @@ public class BinaryNodeWithParent {
 	 */
 	@Override
 	public String toString() {
-		return value+"";
+		return value + "";
 	}
 
 }

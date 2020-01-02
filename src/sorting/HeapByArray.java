@@ -4,28 +4,27 @@ package sorting;
  * The Class HeapByArray.
  */
 public class HeapByArray {
-	
+
 	/** The arr. */
 	int[] arr;
-	
+
 	/** The size of tree. */
 	int sizeOfTree;
-	
-	
+
 	/**
 	 * Instantiates a new heap by array.
 	 *
 	 * @param size the size
 	 */
-	//Constructor
+	// Constructor
 	public HeapByArray(int size) {
-		//We are adding 1 here so that first cell of the array can be left blank all the time. This is eliminate problem of array starting from index 0.
-		arr = new int[size+1];
+		// We are adding 1 here so that first cell of the array can be left blank all
+		// the time. This is eliminate problem of array starting from index 0.
+		arr = new int[size + 1];
 		this.sizeOfTree = 0;
 		System.out.println("Empty Heap has been created !");
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * Size of array.
 	 *
@@ -34,8 +33,7 @@ public class HeapByArray {
 	public int sizeOfArray() {
 		return arr.length;
 	}
-	
-	
+
 	/**
 	 * Size of tree.
 	 *
@@ -44,10 +42,8 @@ public class HeapByArray {
 	public int sizeOfTree() {
 		System.out.println("Size Of Tree: " + sizeOfTree);
 		return sizeOfTree;
-	}//end of method
-	
-	
-	
+	}// end of method
+
 	/**
 	 * Checks if is heap empty.
 	 *
@@ -57,67 +53,60 @@ public class HeapByArray {
 		if (sizeOfTree <= 0) {
 			System.out.println("Tree is empty !");
 			return true;
-		}else {
+		} else {
 			System.out.println("Tree is not empty !");
 			return false;
 		}
-	}//end of method
-	
-	
-	
+	}// end of method
+
 	/**
 	 * Deleteheap.
 	 */
 	public void deleteheap() {
 		arr = null;
 		System.out.println("Heap has been deleted !");
-	}//end of method
-	
-	
-	
+	}// end of method
+
 	/**
 	 * Insert in heap.
 	 *
 	 * @param value the value
 	 */
-	//Insert a new value in Heap
+	// Insert a new value in Heap
 	public void insertInHeap(int value) {
-		//Doing +1 because sizeOfTree always points to the last occupied cell of the array 
+		// Doing +1 because sizeOfTree always points to the last occupied cell of the
+		// array
 		System.out.println("Inserting " + value + " in Heap...");
-		arr[sizeOfTree+1] = value;
+		arr[sizeOfTree + 1] = value;
 		sizeOfTree++;
 		HeapifyBottomToTop(sizeOfTree);
 		System.out.println("Inserted " + value + " successfully in Heap !");
 		levelOrder();
-	}//end of method
-	
-	
-	
+	}// end of method
+
 	/**
 	 * Peek.
 	 */
 	// Peek into Heap
 	public void peek() {
-		if(sizeOfTree == 0) {
+		if (sizeOfTree == 0) {
 			System.out.println("Heap is empty !");
-		}else {
+		} else {
 			System.out.println("Head of the Heap is: " + arr[1]);
 		}
-	}//end of method
-	
-	
-	
+	}// end of method
+
 	/**
 	 * Extract head of heap.
 	 *
 	 * @return the int
 	 */
-	//Extract Head of Heap
+	// Extract Head of Heap
 	public int extractHeadOfHeap() {
-		if(sizeOfTree == 0) {
+		if (sizeOfTree == 0) {
 			System.out.println("Heap is empty !");
 			return -1;
-		}else {
+		} else {
 			System.out.println("Head of the Heap is: " + arr[1]);
 			System.out.println("Extracting it now...");
 			int extractedValue = arr[1];
@@ -128,11 +117,8 @@ public class HeapByArray {
 			levelOrder();
 			return extractedValue;
 		}
-	}//end of method
-	
+	}// end of method
 
-	
-	
 	/**
 	 * Heapify bottom to top.
 	 *
@@ -151,47 +137,42 @@ public class HeapByArray {
 			arr[parent] = tmp;
 		}
 		HeapifyBottomToTop(parent);
-	}//end of method
-	
-	
-	
-	
+	}// end of method
+
 	/**
 	 * Heapify top to bottom.
 	 *
 	 * @param index the index
 	 */
 	public void HeapifyTopToBottom(int index) {
-		int left  = index*2;
-		int right = (index*2)+1;
+		int left = index * 2;
+		int right = (index * 2) + 1;
 		int smallestChild = 0;
-		
-		if (sizeOfTree < left) { //If there is no child of this node, then nothing to do. Just return.
-			return; 
-		}else if (sizeOfTree == left) { //If there is only left child of this node, then do a comparison and return.
-			if(arr[index] > arr[left]) {
+
+		if (sizeOfTree < left) { // If there is no child of this node, then nothing to do. Just return.
+			return;
+		} else if (sizeOfTree == left) { // If there is only left child of this node, then do a comparison and return.
+			if (arr[index] > arr[left]) {
 				int tmp = arr[index];
 				arr[index] = arr[left];
 				arr[left] = tmp;
 			}
 			return;
-		}else { //If both children are there
-			if(arr[left] < arr[right]) { //Find out the smallest child
+		} else { // If both children are there
+			if (arr[left] < arr[right]) { // Find out the smallest child
 				smallestChild = left;
-			}else {
+			} else {
 				smallestChild = right;
 			}
-			if(arr[index] > arr[smallestChild]) { //If Parent is greater than smallest child, then swap
+			if (arr[index] > arr[smallestChild]) { // If Parent is greater than smallest child, then swap
 				int tmp = arr[index];
 				arr[index] = arr[smallestChild];
 				arr[smallestChild] = tmp;
 			}
 		}
 		HeapifyTopToBottom(smallestChild);
-	}//end of method
-	
-	
-	
+	}// end of method
+
 	/**
 	 * Level order.
 	 */
@@ -201,8 +182,6 @@ public class HeapByArray {
 			System.out.print(arr[i] + " ");
 		}
 		System.out.println("\n");
-	}//end of method
-	
-	
-}//end of class	
+	}// end of method
 
+}// end of class

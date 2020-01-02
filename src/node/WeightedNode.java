@@ -9,27 +9,27 @@ import graph.mst.DisjointSet;
  * The Class WeightedNode.
  */
 public class WeightedNode implements Comparable<WeightedNode> {
-	
+
 	/** The name. */
 	public String name;
 
 	/** The neighbors. */
 	private ArrayList<WeightedNode> neighbors = new ArrayList<WeightedNode>();
-	
+
 	/** The weight map. */
 	private HashMap<WeightedNode, Integer> weightMap = new HashMap<>();
-	
+
 	/** The is visited. */
 	private boolean isVisited = false;
-	
+
 	/** The parent. */
 	private WeightedNode parent;
-	
+
 	/** The distance. */
 	private int distance;
-	
+
 	/** The set. */
-	private DisjointSet set; //used in DisjointSet Algorithm
+	private DisjointSet set; // used in DisjointSet Algorithm
 
 	/**
 	 * Instantiates a new weighted node.
@@ -55,7 +55,7 @@ public class WeightedNode implements Comparable<WeightedNode> {
 	 *
 	 * @param set the new sets the
 	 */
-	public void setSet(DisjointSet set) { //used in DisjointSet Algorithm
+	public void setSet(DisjointSet set) { // used in DisjointSet Algorithm
 		this.set = set;
 	}
 

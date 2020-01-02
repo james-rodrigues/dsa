@@ -8,7 +8,7 @@ import node.BinaryNode;
  * The Class BinaryTreeByLinkedList.
  */
 public class BinaryTreeByLinkedList {
-	
+
 	/** The root. */
 	BinaryNode root;
 

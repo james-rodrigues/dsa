@@ -26,26 +26,26 @@ public class DirectChainingMain {
 		directChaining.insertKeyInHashTable("fox"); // use for showing collision
 		directChaining.displayHashTable();
 
-		directChaining.insertKeyInHashTable("fox"); 
+		directChaining.insertKeyInHashTable("fox");
 		directChaining.displayHashTable();
-		
-		directChaining.insertKeyInHashTable("fox"); 
+
+		directChaining.insertKeyInHashTable("fox");
 		directChaining.displayHashTable();
-		
-		directChaining.insertKeyInHashTable("fox"); 
+
+		directChaining.insertKeyInHashTable("fox");
 		directChaining.displayHashTable();
-		
+
 		/*
-		 * DirectChaining.insertKeyInHashTable("fox"); 
+		 * DirectChaining.insertKeyInHashTable("fox");
 		 * DirectChaining.displayHashTable();
 		 * 
-		 * DirectChaining.insertKeyInHashTable("fox"); 
+		 * DirectChaining.insertKeyInHashTable("fox");
 		 * DirectChaining.displayHashTable();
 		 * 
-		 * DirectChaining.insertKeyInHashTable("fox"); 
+		 * DirectChaining.insertKeyInHashTable("fox");
 		 * DirectChaining.displayHashTable();
 		 * 
-		 * DirectChaining.insertKeyInHashTable("fox"); 
+		 * DirectChaining.insertKeyInHashTable("fox");
 		 * DirectChaining.displayHashTable();
 		 * 
 		 * 
@@ -58,8 +58,7 @@ public class DirectChainingMain {
 		 * DirectChaining.displayHashTable();
 		 * 
 		 * 
-		 * DirectChaining.deleteHashTable(); 
-		 * DirectChaining.displayHashTable();
+		 * DirectChaining.deleteHashTable(); DirectChaining.displayHashTable();
 		 */
 
 	}// end of method

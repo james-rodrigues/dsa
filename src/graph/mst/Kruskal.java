@@ -10,10 +10,10 @@ import node.WeightedNode;
  * The Class Kruskal.
  */
 public class Kruskal {
-	
+
 	/** The node list. */
 	ArrayList<WeightedNode> nodeList = new ArrayList<WeightedNode>();
-	
+
 	/** The edge list. */
 	ArrayList<UndirectedEdge> edgeList = new ArrayList<>();
 
@@ -26,7 +26,6 @@ public class Kruskal {
 		this.nodeList = nodeList;
 	}
 
-	
 	/**
 	 * Kruskal.
 	 */
@@ -34,7 +33,7 @@ public class Kruskal {
 	void kruskal() {
 		// make disjoint sets for each node
 		DisjointSet.makeSet(nodeList);
-		
+
 		// sort the edges in ascending order
 		Comparator<UndirectedEdge> comparator = new Comparator<UndirectedEdge>() {
 			@Override
@@ -58,13 +57,12 @@ public class Kruskal {
 		System.out.println("\nTotal cost of MST: " + cost);
 	}
 
-	
 	/**
 	 * Adds the weighted undirected edge.
 	 *
-	 * @param firstIndex the first index
+	 * @param firstIndex  the first index
 	 * @param secondIndex the second index
-	 * @param weight the weight
+	 * @param weight      the weight
 	 */
 	// add a weighted undirected edge between two nodes
 	public void addWeightedUndirectedEdge(int firstIndex, int secondIndex, int weight) {

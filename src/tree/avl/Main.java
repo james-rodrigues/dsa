@@ -4,7 +4,7 @@ package tree.avl;
  * The Class Main.
  */
 public class Main {
-	
+
 	/**
 	 * The main method.
 	 *

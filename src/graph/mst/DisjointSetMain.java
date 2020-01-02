@@ -1,4 +1,5 @@
 package graph.mst;
+
 import java.util.ArrayList;
 import node.WeightedNode;
 
@@ -13,7 +14,7 @@ public class DisjointSetMain {
 	 * @param args the arguments
 	 */
 	public static void main(String[] args) {
-		
+
 		// Constructor for ArrayList
 		ArrayList<WeightedNode> nodeList = new ArrayList<>();
 

@@ -9,25 +9,25 @@ import graph.mst.DisjointSet;
  * The Class WeightedNode2.
  */
 public class WeightedNode2 implements Comparable<WeightedNode2> {
-	
+
 	/** The name. */
 	public String name;
 
 	/** The neighbors. */
 	private ArrayList<WeightedNode2> neighbors = new ArrayList<WeightedNode2>();
-	
+
 	/** The weight map. */
 	private HashMap<WeightedNode2, Integer> weightMap = new HashMap<>();
-	
+
 	/** The is visited. */
 	private boolean isVisited = false;
-	
+
 	/** The parent. */
 	private WeightedNode2 parent;
-	
+
 	/** The distance. */
 	private int distance;
-	
+
 	/** The set. */
 	private DisjointSet set;
 

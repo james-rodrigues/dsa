@@ -4,31 +4,30 @@ package algo.greedy.activityselection;
  * The Class Activity.
  */
 public class Activity {
-	
+
 	/** The name. */
 	private String name;
-	
+
 	/** The start time. */
 	private int startTime;
-	
+
 	/** The finish time. */
 	private int finishTime;
 
 	/**
 	 * Instantiates a new activity.
 	 *
-	 * @param name the name
-	 * @param startTime the start time
+	 * @param name       the name
+	 * @param startTime  the start time
 	 * @param finishTime the finish time
 	 */
-	//Constructor
+	// Constructor
 	public Activity(String name, int startTime, int finishTime) {
 		this.name = name;
 		this.startTime = startTime;
 		this.finishTime = finishTime;
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * Gets the name.
 	 *
@@ -36,9 +35,8 @@ public class Activity {
 	 */
 	public String getName() {
 		return name;
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * Sets the name.
 	 *
@@ -46,9 +44,8 @@ public class Activity {
 	 */
 	public void setName(String name) {
 		this.name = name;
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * Gets the start time.
 	 *
@@ -56,8 +53,7 @@ public class Activity {
 	 */
 	public int getStartTime() {
 		return startTime;
-	}//end of method
-	
+	}// end of method
 
 	/**
 	 * Sets the start time.
@@ -66,9 +62,8 @@ public class Activity {
 	 */
 	public void setStartTime(int startTime) {
 		this.startTime = startTime;
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * Gets the finish time.
 	 *
@@ -76,9 +71,8 @@ public class Activity {
 	 */
 	public int getFinishTime() {
 		return finishTime;
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * Sets the finish time.
 	 *
@@ -86,8 +80,7 @@ public class Activity {
 	 */
 	public void setFinishTime(int finishTime) {
 		this.finishTime = finishTime;
-	}//end of method
-	
+	}// end of method
 
 	/**
 	 * To string.
@@ -97,6 +90,6 @@ public class Activity {
 	@Override
 	public String toString() {
 		return "Activity :" + name + ", start time = " + startTime + ", finish time = " + finishTime;
-	}//end of method
+	}// end of method
 
-}//end of class
+}// end of class

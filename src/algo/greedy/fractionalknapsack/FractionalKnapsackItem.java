@@ -4,34 +4,33 @@ package algo.greedy.fractionalknapsack;
  * The Class FractionalKnapsackItem.
  */
 public class FractionalKnapsackItem {
-	
+
 	/** The index. */
 	private int index;
-	
+
 	/** The value. */
 	private int value;
-	
+
 	/** The weight. */
 	private int weight;
-	
+
 	/** The ratio. */
 	private double ratio;
 
 	/**
 	 * Instantiates a new fractional knapsack item.
 	 *
-	 * @param index the index
-	 * @param value the value
+	 * @param index  the index
+	 * @param value  the value
 	 * @param weight the weight
 	 */
-	//constructor
+	// constructor
 	public FractionalKnapsackItem(int index, int value, int weight) {
 		this.index = index;
 		this.value = value;
 		this.weight = weight;
 		ratio = value * 1.0 / weight;
-	}//end of method
-	
+	}// end of method
 
 	/**
 	 * Gets the index.
@@ -40,9 +39,8 @@ public class FractionalKnapsackItem {
 	 */
 	public int getIndex() {
 		return index;
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * Sets the index.
 	 *
@@ -50,8 +48,7 @@ public class FractionalKnapsackItem {
 	 */
 	public void setIndex(int index) {
 		this.index = index;
-	}//end of method
-	
+	}// end of method
 
 	/**
 	 * Gets the value.
@@ -60,8 +57,7 @@ public class FractionalKnapsackItem {
 	 */
 	public int getValue() {
 		return value;
-	}//end of method
-	
+	}// end of method
 
 	/**
 	 * Sets the value.
@@ -70,8 +66,7 @@ public class FractionalKnapsackItem {
 	 */
 	public void setValue(int value) {
 		this.value = value;
-	}//end of method
-	
+	}// end of method
 
 	/**
 	 * Gets the weight.
@@ -80,8 +75,7 @@ public class FractionalKnapsackItem {
 	 */
 	public int getWeight() {
 		return weight;
-	}//end of method
-	
+	}// end of method
 
 	/**
 	 * Sets the weight.
@@ -90,8 +84,7 @@ public class FractionalKnapsackItem {
 	 */
 	public void setWeight(int weight) {
 		this.weight = weight;
-	}//end of method
-	
+	}// end of method
 
 	/**
 	 * Gets the ratio.
@@ -100,9 +93,8 @@ public class FractionalKnapsackItem {
 	 */
 	public double getRatio() {
 		return ratio;
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * Sets the ratio.
 	 *
@@ -110,9 +102,8 @@ public class FractionalKnapsackItem {
 	 */
 	public void setRatio(double ratio) {
 		this.ratio = ratio;
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * To string.
 	 *
@@ -121,6 +112,6 @@ public class FractionalKnapsackItem {
 	@Override
 	public String toString() {
 		return "Item index=" + index + ", value=" + value + ", weight=" + weight + ", ratio=" + ratio + "]";
-	}//end of method
+	}// end of method
 
-}//end of class
+}// end of class

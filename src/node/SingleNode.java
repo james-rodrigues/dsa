@@ -5,20 +5,20 @@ package node;
  *
  * @param <T> the generic type
  */
-public  class SingleNode<T> {
-	
+public class SingleNode<T> {
+
 	/** The value. */
 	private T value;
-	
+
 	/** The next. */
 	private SingleNode next;
-	
-/**
- * Gets the value.
- *
- * @return the value
- */
-public T getValue() {
+
+	/**
+	 * Gets the value.
+	 *
+	 * @return the value
+	 */
+	public T getValue() {
 		return value;
 	}
 
@@ -49,14 +49,14 @@ public T getValue() {
 		this.next = next;
 	}
 
-/**
- * To string.
- *
- * @return the string
- */
-@Override
-public String toString() {
-	return  value + "";
-}
+	/**
+	 * To string.
+	 *
+	 * @return the string
+	 */
+	@Override
+	public String toString() {
+		return value + "";
+	}
 
 }

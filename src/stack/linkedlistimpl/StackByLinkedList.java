@@ -12,31 +12,28 @@ public class StackByLinkedList<T> {
 	/** The list. */
 	SingleLinkedList<T> list;
 
-	
 	/**
 	 * Instantiates a new stack by linked list.
 	 */
-	//constructor
-	public  StackByLinkedList() {
+	// constructor
+	public StackByLinkedList() {
 		list = new SingleLinkedList<T>();
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * Push.
 	 *
 	 * @param value the value
 	 */
 	public void push(T value) {
-		if(list.getHead()== null) {
+		if (list.getHead() == null) {
 			list.createSingleLinkedList(value);
-		}else {
-			list.insertInLinkedList(value, 0);	
+		} else {
+			list.insertInLinkedList(value, 0);
 		}
 		System.out.println("Inserted " + value + " in Stack !");
-	}//end of method
+	}// end of method
 
-	
 	/**
 	 * Pop.
 	 *
@@ -53,7 +50,6 @@ public class StackByLinkedList<T> {
 		return value;
 	}// end of method
 
-	
 	/**
 	 * Checks if is empty.
 	 *
@@ -66,7 +62,6 @@ public class StackByLinkedList<T> {
 			return false;
 	}// end of method
 
-	
 	/**
 	 * Peek.
 	 *
@@ -80,13 +75,12 @@ public class StackByLinkedList<T> {
 			return null;
 		}
 	}// end of method
-	
 
 	/**
 	 * Delete stack.
 	 */
 	public void deleteStack() {
 		list.setHead(null);
-	}//end of method
-	
-}//end of method
+	}// end of method
+
+}// end of method
