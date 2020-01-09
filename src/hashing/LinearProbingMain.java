@@ -26,27 +26,27 @@ public class LinearProbingMain {
 		linearProbing.insertKeyInHashTable("fox"); // use for showing collision
 		linearProbing.displayHashTable();
 
-		/*
-		 * linearProbing.insertKeyInHashTable("fox"); linearProbing.displayHashTable();
-		 * 
-		 * linearProbing.insertKeyInHashTable("fox"); linearProbing.displayHashTable();
-		 * 
-		 * linearProbing.insertKeyInHashTable("fox"); linearProbing.displayHashTable();
-		 * 
-		 * linearProbing.insertKeyInHashTable("fox"); linearProbing.displayHashTable();
-		 * 
-		 * 
-		 * linearProbing.searchKeyInHashTable("jump");
-		 * linearProbing.searchKeyInHashTable("brown");
-		 * 
-		 * 
-		 * linearProbing.deleteKeyFromHashTable("jump");
-		 * linearProbing.deleteKeyFromHashTable("quick");
-		 * linearProbing.displayHashTable();
-		 * 
-		 * 
-		 * linearProbing.deleteHashTable(); linearProbing.displayHashTable();
-		 */
+		linearProbing.insertKeyInHashTable("fox");
+		linearProbing.displayHashTable();
+
+		linearProbing.insertKeyInHashTable("fox");
+		linearProbing.displayHashTable();
+
+		linearProbing.insertKeyInHashTable("fox");
+		linearProbing.displayHashTable();
+
+		linearProbing.insertKeyInHashTable("fox");
+		linearProbing.displayHashTable();
+
+		linearProbing.searchKeyInHashTable("jump");
+		linearProbing.searchKeyInHashTable("brown");
+
+		linearProbing.deleteKeyFromHashTable("jump");
+		linearProbing.deleteKeyFromHashTable("quick");
+		linearProbing.displayHashTable();
+
+		linearProbing.deleteHashTable();
+		linearProbing.displayHashTable();
 
 	}// end of method
 

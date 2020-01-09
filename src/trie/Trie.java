@@ -86,6 +86,7 @@ public class Trie {
 				// exists
 			System.out.println("Word: " + word + " does not exists in Trie ! But this is a Prefix of another Word !");
 		}
+		
 		return currentNode.endOfWord;
 	}
 

@@ -104,7 +104,7 @@ public class DirectChaining {
 	// display the hash table
 	public void displayHashTable() {
 		if (hashTable == null) {
-			System.out.println("\nHashTable does not exits !");
+			System.out.println("\nHashTable does not exist !");
 			return;
 		} else {
 			System.out.println("\n---------- HashTable ---------");

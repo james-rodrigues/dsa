@@ -23,18 +23,20 @@ public class DoubleHashingMain {
 		doubleHashing.insertKeyInHashTable("lazy");
 		doubleHashing.displayHashTable();
 
-		/*
-		 * doubleHashing.insertKeyInHashTable("fox"); // use for showing collision
-		 * doubleHashing.displayHashTable();
-		 * 
-		 * doubleHashing.insertKeyInHashTable("fox"); doubleHashing.displayHashTable();
-		 * 
-		 * doubleHashing.insertKeyInHashTable("fox"); doubleHashing.displayHashTable();
-		 * 
-		 * doubleHashing.insertKeyInHashTable("fox"); doubleHashing.displayHashTable();
-		 * 
-		 * doubleHashing.insertKeyInHashTable("fox"); doubleHashing.displayHashTable();
-		 */
+		doubleHashing.insertKeyInHashTable("fox"); // use for showing collision
+		doubleHashing.displayHashTable();
+
+		doubleHashing.insertKeyInHashTable("fox");
+		doubleHashing.displayHashTable();
+
+		doubleHashing.insertKeyInHashTable("fox");
+		doubleHashing.displayHashTable();
+
+		doubleHashing.insertKeyInHashTable("fox");
+		doubleHashing.displayHashTable();
+
+		doubleHashing.insertKeyInHashTable("fox");
+		doubleHashing.displayHashTable();
 
 		doubleHashing.searchKeyInHashTable("jump");
 		doubleHashing.searchKeyInHashTable("brown");

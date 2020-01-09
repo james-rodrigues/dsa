@@ -37,20 +37,22 @@ public class BinarySearchTreeByLinkedListMain {
 		tree.deleteNodeOfBST(80); // Node does not exists
 		tree.printTreeGraphically();
 
-		/*
-		 * tree.deleteNodeOfBST(57); //Node is having 0 Child
-		 * tree.printTreeGraphically();
-		 * 
-		 * tree.deleteNodeOfBST(60); //Node is having 1 Child
-		 * tree.printTreeGraphically();
-		 * 
-		 * tree.deleteNodeOfBST(50); //Node is having 2 Child
-		 * tree.printTreeGraphically();
-		 * 
-		 * //Deleting entire Tree tree.deleteTree();
-		 * 
-		 * //Traversing Tree tree.levelOrderTraversal();
-		 */
+		tree.deleteNodeOfBST(50); // Node is having 0 Child
+		tree.printTreeGraphically();
+
+		tree.deleteNodeOfBST(70); // Node is having 1 Child
+		tree.printTreeGraphically();
+
+		tree.deleteNodeOfBST(100); // Node is having 2 Child
+		tree.printTreeGraphically();
+		tree.levelOrderTraversal();
+
+		// Deleting entire Tree 
+		tree.deleteTree();
+
+		// Traversing Tree 
+		tree.levelOrderTraversal();
+
 	}// end of method
 
 }// end of class

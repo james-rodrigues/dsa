@@ -173,7 +173,7 @@ public class BinarySearchTreeByLinkedList {
 	 * Level order traversal.
 	 */
 	// Level order traversal of BST
-	void levelOrderTraversal() {
+	public void levelOrderTraversal() {
 		Queue<BinaryNode> queue = new LinkedList<BinaryNode>();
 		queue.add(root);
 		System.out.println("\nPrinting Level order traversal of Tree...");

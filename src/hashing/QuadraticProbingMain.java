@@ -23,23 +23,20 @@ public class QuadraticProbingMain {
 		quadraticProbing.insertKeyInHashTable("lazy");
 		quadraticProbing.displayHashTable();
 
-		/*
-		 * quadraticProbing.insertKeyInHashTable("fox"); //use for showing collision
-		 * quadraticProbing.displayHashTable();
-		 * 
-		 * quadraticProbing.insertKeyInHashTable("fox");
-		 * quadraticProbing.displayHashTable();
-		 * 
-		 * quadraticProbing.insertKeyInHashTable("fox");
-		 * quadraticProbing.displayHashTable();
-		 * 
-		 * quadraticProbing.insertKeyInHashTable("fox");
-		 * quadraticProbing.displayHashTable();
-		 * 
-		 * 
-		 * quadraticProbing.insertKeyInHashTable("fox");
-		 * quadraticProbing.displayHashTable();
-		 */
+		quadraticProbing.insertKeyInHashTable("fox"); // use for showing collision
+		quadraticProbing.displayHashTable();
+
+		quadraticProbing.insertKeyInHashTable("fox");
+		quadraticProbing.displayHashTable();
+
+		quadraticProbing.insertKeyInHashTable("fox");
+		quadraticProbing.displayHashTable();
+
+		quadraticProbing.insertKeyInHashTable("fox");
+		quadraticProbing.displayHashTable();
+
+		quadraticProbing.insertKeyInHashTable("fox");
+		quadraticProbing.displayHashTable();
 
 		quadraticProbing.searchKeyInHashTable("jump");
 		quadraticProbing.searchKeyInHashTable("brown");

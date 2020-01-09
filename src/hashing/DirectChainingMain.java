@@ -35,31 +35,15 @@ public class DirectChainingMain {
 		directChaining.insertKeyInHashTable("fox");
 		directChaining.displayHashTable();
 
-		/*
-		 * DirectChaining.insertKeyInHashTable("fox");
-		 * DirectChaining.displayHashTable();
-		 * 
-		 * DirectChaining.insertKeyInHashTable("fox");
-		 * DirectChaining.displayHashTable();
-		 * 
-		 * DirectChaining.insertKeyInHashTable("fox");
-		 * DirectChaining.displayHashTable();
-		 * 
-		 * DirectChaining.insertKeyInHashTable("fox");
-		 * DirectChaining.displayHashTable();
-		 * 
-		 * 
-		 * DirectChaining.searchKeyInHashTable("jump");
-		 * DirectChaining.searchKeyInHashTable("brown");
-		 * 
-		 * 
-		 * DirectChaining.deleteKeyFromHashTable("jump");
-		 * DirectChaining.deleteKeyFromHashTable("quick");
-		 * DirectChaining.displayHashTable();
-		 * 
-		 * 
-		 * DirectChaining.deleteHashTable(); DirectChaining.displayHashTable();
-		 */
+		directChaining.searchKeyInHashTable("jump");
+		directChaining.searchKeyInHashTable("brown");
+
+		directChaining.deleteKeyFromHashTable("jump");
+		directChaining.deleteKeyFromHashTable("quick");
+		directChaining.displayHashTable();
+
+		directChaining.deleteHashTable();
+		directChaining.displayHashTable();
 
 	}// end of method
 
