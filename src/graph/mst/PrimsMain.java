@@ -30,8 +30,9 @@ public class PrimsMain {
 		graph.addWeightedUndirectedEdge(3, 5, 6); // Add undirected Edge between C-E with Weight 6
 		graph.addWeightedUndirectedEdge(4, 5, 8); // Add undirected Edge between D-E with Weight 8
 
-		System.out.println("Printing Prim's Algo from source: E");
-		graph.prims(nodeList.get(4));
+		System.out.println("Printing Prim's Algo from source: A");
+		graph.prims(nodeList.get(0));
+		
 
 	}// end of method
 

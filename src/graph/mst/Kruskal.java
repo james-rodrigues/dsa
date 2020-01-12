@@ -3,6 +3,7 @@ package graph.mst;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.PriorityQueue;
 
 import node.WeightedNode;
 
@@ -45,6 +46,35 @@ public class Kruskal {
 
 		int cost = 0;
 		for (UndirectedEdge edge : edgeList) {
+			WeightedNode first = edge.getFirst();
+			WeightedNode second = edge.getSecond();
+			if (!DisjointSet.findSet(first).equals(DisjointSet.findSet(second))) {
+				DisjointSet.union(first, second);
+				cost += edge.getWeight();
+				System.out.println("Taken " + edge);
+			}
+		}
+
+		System.out.println("\nTotal cost of MST: " + cost);
+	}
+
+	void kruskalWithQueue() {
+		// make disjoint sets for each node
+		DisjointSet.makeSet(nodeList);
+
+		// sort the edges in ascending order
+		Comparator<UndirectedEdge> comparator = new Comparator<UndirectedEdge>() {
+			@Override
+			public int compare(UndirectedEdge o1, UndirectedEdge o2) {
+				return o1.getWeight() - o2.getWeight();
+			}
+		};
+		PriorityQueue<UndirectedEdge> queue = new PriorityQueue<UndirectedEdge>(comparator);
+		queue.addAll(edgeList);
+
+		int cost = 0;
+		while (!queue.isEmpty()) {
+			UndirectedEdge edge = queue.remove();
 			WeightedNode first = edge.getFirst();
 			WeightedNode second = edge.getSecond();
 			if (!DisjointSet.findSet(first).equals(DisjointSet.findSet(second))) {

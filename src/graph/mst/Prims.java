@@ -2,6 +2,7 @@ package graph.mst;
 
 import java.util.ArrayList;
 import java.util.PriorityQueue;
+
 import node.WeightedNode;
 
 /**
@@ -34,17 +35,11 @@ public class Prims {
 		}
 		node.setDistance(0); // Setting '0' distance for Source Vertex
 
-		System.out.println("I am waiting");
-		try {
-			Thread.sleep(100 * 1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
 		PriorityQueue<WeightedNode> queue = new PriorityQueue<>();
 
 		queue.addAll(nodeList);
 		while (!queue.isEmpty()) {
+			System.out.println("Queue Contents : " + queue);
 			WeightedNode presentNode = queue.remove(); // Remove vertex which has min distance
 
 			for (WeightedNode neighbor : presentNode.getNeighbors()) {
@@ -63,9 +58,10 @@ public class Prims {
 
 		int cost = 0;
 		// print table of node with minimum distance and shortest path from source
+		System.out.println("Printing the path taken for minimum spanning tree from node " + node.getName());
 		for (WeightedNode nodeToCheck : nodeList) {
-			System.out.println("Node " + nodeToCheck + ", key: " + nodeToCheck.getDistance() + ", Parent: "
-					+ nodeToCheck.getParent());
+			System.out.println("Node " + nodeToCheck.getName() + ", Distance: " + nodeToCheck.getDistance()
+					+ ", Parent: " + (null == nodeToCheck.getParent() ? null : nodeToCheck.getParent().getName()));
 			cost = cost + nodeToCheck.getDistance();
 		} // end of for loop
 

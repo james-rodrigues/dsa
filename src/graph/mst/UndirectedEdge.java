@@ -90,7 +90,7 @@ public class UndirectedEdge {
 	 */
 	@Override
 	public String toString() {
-		return "Edge (" + first + "," + second + "), weight=" + weight + "]";
+		return "Edge (" + first.getName() + "," + second.getName() + "), weight=" + weight;
 	}
 
 }

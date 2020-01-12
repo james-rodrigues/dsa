@@ -29,7 +29,7 @@ public class DisjointSet {
 			System.out.println("\nSecond Set name is: " + secondNode.getName());
 			secondNode.getSet().printAllNodesOfThisSet();
 			if (!findSet(firstNode).equals(findSet(secondNode))) {
-				System.out.println("\nMaking union " + firstNode + " and " + secondNode);
+				System.out.println("\nMaking union " + firstNode.getName() + " and " + secondNode.getName());
 				DisjointSet unionedSet = union(firstNode, secondNode);
 				unionedSet.printAllNodesOfThisSet();
 			}
@@ -130,7 +130,7 @@ public class DisjointSet {
 	public void printAllNodesOfThisSet() {
 		System.out.println("Printing all nodes of the set: ");
 		for (WeightedNode node : nodes) {
-			System.out.print(node + "  ");
+			System.out.print(node.getName() + "  ");
 		}
 		System.out.println();
 	}// end of method

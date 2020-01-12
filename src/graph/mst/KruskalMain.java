@@ -41,6 +41,9 @@ public class KruskalMain {
 		// run kruskal on graph
 		System.out.println("Running Kruskal's Algo on the graph: ");
 		graph.kruskal();
+		
+		System.out.println("Running Kruskal's Algo with Priority Queue as sorting on the graph");
+		graph.kruskalWithQueue();
 	}// end of method
 
 }// end of class
