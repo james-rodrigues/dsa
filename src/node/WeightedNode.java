@@ -174,7 +174,7 @@ public class WeightedNode implements Comparable<WeightedNode> {
 	 */
 	@Override
 	public String toString() {
-		return name;
+		return name + "[" + distance + "]";
 	}
 
 	/**

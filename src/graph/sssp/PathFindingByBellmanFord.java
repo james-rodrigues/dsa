@@ -71,10 +71,11 @@ public class PathFindingByBellmanFord {
 		System.out.println("\n\nPrinting Paths now: ");
 		for (WeightedNode nodeToCheck : nodeList) {
 			if (nodeToCheck.getDistance() != Integer.MAX_VALUE / 10) {
-				System.out.print("Node " + nodeToCheck + ", distance: " + nodeToCheck.getDistance() + ", Path: ");
+				System.out.print(
+						"Node " + nodeToCheck.getName() + ", distance: " + nodeToCheck.getDistance() + ", Path: ");
 				pathPrint(nodeToCheck);
 			} else {
-				System.out.print("No path for node " + nodeToCheck);
+				System.out.print("No path for node " + nodeToCheck.getName());
 			}
 			System.out.println();
 		} // end of loop
@@ -89,9 +90,9 @@ public class PathFindingByBellmanFord {
 	private static void pathPrint(WeightedNode node) {
 		if (node.getParent() != null) {
 			pathPrint(node.getParent());
-			System.out.print("->" + node);
+			System.out.print("->" + node.getName());
 		} else
-			System.out.print(node);
+			System.out.print(node.getName());
 	}// end of method
 
 	/**

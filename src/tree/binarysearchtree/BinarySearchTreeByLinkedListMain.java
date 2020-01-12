@@ -47,10 +47,10 @@ public class BinarySearchTreeByLinkedListMain {
 		tree.printTreeGraphically();
 		tree.levelOrderTraversal();
 
-		// Deleting entire Tree 
+		// Deleting entire Tree
 		tree.deleteTree();
 
-		// Traversing Tree 
+		// Traversing Tree
 		tree.levelOrderTraversal();
 
 	}// end of method

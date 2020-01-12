@@ -29,9 +29,11 @@ public class PathFindingByBFS {
 	 */
 	// Print path of each of the vertex from source
 	public static void pathPrint(GraphNode node) {
-		if (node.getParent() != null)
+		if (node.getParent() != null) {
 			pathPrint(node.getParent()); // recursive call to parent
-		System.out.print(node + " ");
+			System.out.print(" -> " + node);
+		} else
+			System.out.print(node);
 	}// end of method
 
 	/**
@@ -44,6 +46,7 @@ public class PathFindingByBFS {
 		LinkedList<GraphNode> queue = new LinkedList<>();
 		queue.add(node); // add source node to queue
 		while (!queue.isEmpty()) {
+			System.out.println("Queue Contents :" + queue);
 			GraphNode presentNode = queue.remove(0);
 			presentNode.setVisited(true);
 			System.out.print("Printing path for node " + presentNode.getName() + ": ");

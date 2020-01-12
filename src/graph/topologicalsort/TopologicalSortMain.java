@@ -26,8 +26,8 @@ public class TopologicalSortMain {
 		graph.addDirectedEdge(5, 6);
 		graph.addDirectedEdge(6, 7);
 		graph.addDirectedEdge(5, 8);
-		
-		//Performing Topologically sort
+
+		// Performing Topologically sort
 		graph.topologicalSort();
 
 	}

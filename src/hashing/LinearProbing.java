@@ -68,7 +68,7 @@ public class LinearProbing {
 			int index = simpleASCIIHashFunction(value, hashTable.length);
 			for (int i = index; i < index + hashTable.length; i++) {
 				int newIndex = i % hashTable.length;
-				
+
 				if (hashTable[newIndex] == null) { // If index is blank, then insert there
 					hashTable[newIndex] = value;
 					System.out.println("Index: " + newIndex + " is blank. Inserting there...");

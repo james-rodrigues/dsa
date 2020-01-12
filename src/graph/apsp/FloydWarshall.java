@@ -57,9 +57,17 @@ public class FloydWarshall {
 
 		// Print table of node with minimum distance and shortest path from each source
 		for (int i = 0; i < size; i++) {
-			System.out.print("Printing distance list for node " + nodeList.get(i) + ": ");
+			System.out.print("Printing distance list for node " + nodeList.get(i).getName() + ": ");
 			for (int j = 0; j < size; j++) {
-				System.out.print(V[i][j] + " ");
+				// System.out.print(V[i][j] + " ");
+
+				// Print formatting logic not associated with code, above commented line is
+				// enough
+				if (i == j)
+					continue;
+				System.out.print("To Node : " + (char) (65 + j) + " Distance : " + V[i][j]);
+				if (j != size - 1)
+					System.out.print(", ");
 			}
 			System.out.println();
 		}

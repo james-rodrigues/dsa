@@ -34,6 +34,7 @@ public class PathFindingByDijkstra {
 								// distance is min
 		queue.addAll(nodeList);
 		while (!queue.isEmpty()) {
+			System.out.println("Queue Contents : " + queue);
 			WeightedNode presentNode = queue.remove(); // remove node with minimum distance from queue
 			for (WeightedNode neighbor : presentNode.getNeighbors()) { // for each neighbor
 				if (queue.contains(neighbor)) { // if neighbor is not visited
@@ -54,9 +55,15 @@ public class PathFindingByDijkstra {
 
 		// print table of node with minimum distance and shortest path from source
 		for (WeightedNode nodeToCheck : nodeList) {
-			System.out.print("Node " + nodeToCheck + ", distance: " + nodeToCheck.getDistance() + ", Path: ");
-			pathPrint(nodeToCheck);
+			if (Integer.MAX_VALUE != nodeToCheck.getDistance()) {
+				System.out.print(
+						"Node " + nodeToCheck.getName() + ", distance: " + nodeToCheck.getDistance() + ", Path: ");
+				pathPrint(nodeToCheck);
+			} else {
+				System.out.print("No Path Possible for Node  " + nodeToCheck.getName());
+			}
 			System.out.println();
+
 		}
 	}// end of method
 
@@ -68,9 +75,9 @@ public class PathFindingByDijkstra {
 	private static void pathPrint(WeightedNode node) {
 		if (node.getParent() != null) {
 			pathPrint(node.getParent());
-			System.out.print("->" + node);
+			System.out.print("->" + node.getName());
 		} else
-			System.out.print(node);
+			System.out.print(node.getName());
 	}// end of method
 
 	/**
